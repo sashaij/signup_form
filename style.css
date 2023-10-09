@@ -1,11 +1,12 @@
 body {
     display: flex;
     flex-direction: row;
+    margin: 0;
 }
 
 div.side-template {
     background-image: url(images/jazmin-quaynor-bm9zWKi_c9Y-unsplash.jpg);
-    background-size: inherit;
+    background-size: 20em;
     min-width: 20vw;
     min-height: 100vh;
     margin: 0;
