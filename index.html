@@ -9,7 +9,7 @@
 <body>
     <div class="side-template">
         <div id="image-credit">
-            Photo by <a href="https://unsplash.com/@jazminantoinette?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jazmin Quaynor</a> on <a href="https://unsplash.com/photos/bm9zWKi_c9Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            Photo by <a id="bckgr-img-credit" href="https://unsplash.com/@jazminantoinette?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jazmin Quaynor</a> on <a href="https://unsplash.com/photos/bm9zWKi_c9Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         </div>
         <div id="card-body">
             <img src="images/pngwing.com.png" alt="company logo" id="company-logo">
@@ -22,20 +22,40 @@
         </div>
         <form  action="/" method="POST">
             <legend>Get Started</legend>
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name" placeholder="John">
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name" placeholder="Doe">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="mymail@mail.com">
-            <label for="phone-number">Phone number</label>
-            <input type="tel" id="phone-number" name="phone-number" placeholder="0653242315">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" name="confirm-password">
-            <button type="submit" id="submit-button" name="submit-button">Create Account</button>
-        </form>
+            <div id="inputs-cont">
+                <ul id="inputs-left">
+                    <li>
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="John">
+                    </li>
+                    <li>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Doe">
+                    </li>
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="mymail@mail.com">
+                    </li>
+                </ul>
+                <ul id="inputs-right">
+                    <li>
+                        <label for="phone-number">Phone number</label>
+                        <input type="tel" id="phone-number" name="phone-number" placeholder="0653242315">
+                    </li>
+                    <li>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                    </li>
+                    <li>
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password">
+                    </li>
+                </ul>
+            </div>
+            </form>
+        <div>
+        <button type="submit" id="submit-button" name="submit-button">Create Account</button>
+        </div>
         <div id="log-in-string"><span>Already have an account? <a href="#">Log In</a></span></div>
     </div>
     <script src="script.js"></script>
