@@ -10,6 +10,7 @@
 body {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0;
     font-family: 'Onest', sans-serif, Arial, Helvetica, sans-serif;
 }
@@ -24,12 +25,21 @@ label {
     text-align: right;
 }
 
+legend {
+    margin: 1.5rem 4.88rem;
+    font-size: 2rem;
+}
+
 div.side-template {
     background-image: url(images/jazmin-quaynor-bm9zWKi_c9Y-unsplash.jpg);
     background-size: 40em;
     min-width: 40vw;
     min-height: 100vh;
     margin: 0;
+}
+
+.form-template {
+    max-width: 58vw;
 }
 
 #card-body {
@@ -60,8 +70,10 @@ div.side-template {
 
 #inputs-cont {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    max-width: 40rem;
 }
 
 #inputs-left, #inputs-right {
@@ -71,6 +83,6 @@ div.side-template {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 25rem;
+    width: 20rem;
     height: 6rem;
 }
