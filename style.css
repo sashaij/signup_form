@@ -9,10 +9,18 @@
 
 body {
     display: flex;
+    flex: 50vw;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0;
     font-family: 'Onest', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 div#image-credit > a {
@@ -20,36 +28,35 @@ div#image-credit > a {
 }
 
 label {
-    display: inline-block;
-    width: 10rem;
-    text-align: right;
+  font-size: .7rem;
+  font-weight: 900;
 }
 
 legend {
-    margin: 1.5rem 4.88rem;
+    padding: 0 40px;
     font-size: 2rem;
+
+}
+
+li {
+    list-style: none;
 }
 
 div.side-template {
+    display: flex;
+    flex-basis: 40vw;
     background-image: url(images/jazmin-quaynor-bm9zWKi_c9Y-unsplash.jpg);
     background-size: 40em;
-    min-width: 40vw;
-    min-height: 100vh;
     margin: 0;
 }
 
 .form-template {
-    max-width: 58vw;
+ flex-basis: 58vw;
 }
 
 #card-body {
     color: white;
     background-color: var(--color-background-tamplates);
-    height: 8rem;
-    width: 40vw;
-    position: absolute;
-    text-align: center;
-    top: 25vh;
 }
 
 
@@ -70,19 +77,12 @@ div.side-template {
 
 #inputs-cont {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    flex-direction: row;
+    justify-content: start;
     flex-wrap: wrap;
-    max-width: 40rem;
+
 }
 
 #inputs-left, #inputs-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 20rem;
-    height: 6rem;
+    flex-basis: 10rem;
 }
