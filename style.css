@@ -3,7 +3,7 @@
 :root {
     --color-valid: #79E0EE; 
     --color-invalid: #F94C10; 
-    --color-background: #F8DE22; 
+    --color-background: #FFF5E0; 
     --color-background-tamplates: rgba(0, 0, 0, 0.6);
 }
 
@@ -14,6 +14,11 @@ body {
     flex-wrap: wrap;
     margin: 0;
     font-family: 'Onest', sans-serif, Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+h2 {
+    padding: 0 40px;
 }
 
 form {
@@ -27,36 +32,65 @@ div#image-credit > a {
     color: aliceblue;
 }
 
+div.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-basis: 4rem;
+}
+
+
+div.form-template {
+    background-color: var(--color-background);
+}
+
+div.footer, legend {
+    padding: 0 40px;
+}
+
 label {
   font-size: .7rem;
   font-weight: 900;
 }
 
 legend {
-    padding: 0 40px;
     font-size: 2rem;
-
 }
 
 li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     list-style: none;
 }
 
 div.side-template {
     display: flex;
+    flex-direction: column;
     flex-basis: 40vw;
     background-image: url(images/jazmin-quaynor-bm9zWKi_c9Y-unsplash.jpg);
     background-size: 40em;
+    background-position: auto;
     margin: 0;
 }
 
 .form-template {
- flex-basis: 58vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 58vw;
 }
 
 #card-body {
     color: white;
     background-color: var(--color-background-tamplates);
+    position: relative;
+    top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
 }
 
 
@@ -72,7 +106,7 @@ div.side-template {
     width: 100%;
     background: var(--color-background-tamplates);
     position: relative;
-    top: 97.9vh;
+    top: 80vh;
 }
 
 #inputs-cont {
@@ -80,9 +114,16 @@ div.side-template {
     flex-direction: row;
     justify-content: start;
     flex-wrap: wrap;
+    min-width: 58vw;
+    background-color: white;
 
 }
 
-#inputs-left, #inputs-right {
-    flex-basis: 10rem;
+#inputs-left, 
+#inputs-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 12rem;
+    height: 10rem;
 }
