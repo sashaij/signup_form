@@ -46,7 +46,7 @@ div.form-template {
 }
 
 div.footer, legend {
-    padding: 0 40px;
+    padding: 2.5rem;
 }
 
 label {
@@ -69,9 +69,11 @@ div.side-template {
     display: flex;
     flex-direction: column;
     flex-basis: 40vw;
+    max-width: 600px;
     background-image: url(images/jazmin-quaynor-bm9zWKi_c9Y-unsplash.jpg);
-    background-size: 40em;
+    background-repeat: no-repeat;
     background-position: auto;
+    background-size: 700px auto;
     margin: 0;
 }
 
@@ -116,7 +118,7 @@ div.side-template {
     flex-wrap: wrap;
     min-width: 58vw;
     background-color: white;
-
+    box-shadow: 0px 2px 7px -1px rgba(0, 0, 0, 0.2);
 }
 
 #inputs-left, 
