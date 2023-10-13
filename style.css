@@ -28,6 +28,18 @@
     .form-template {
         width: 58.9%;
     }
+
+    div#image-credit {
+        display: inline-block;
+        text-align: center;
+        font-size: 1rem;
+        color: aliceblue;
+        width: 100%;
+        background: var(--color-background-tamplates);
+        position: relative;
+        bottom: 0rem;
+    }
+
 }
 
 body {
@@ -125,15 +137,6 @@ li {
     padding: 1.2rem 0;
 }
 
-#image-credit {
-    display: inline-block;
-    text-align: center;
-    color: aliceblue;
-    width: 100%;
-    background: var(--color-background-tamplates);
-    position: relative;
-    top: 80vh;
-}
 
 #inputs-cont {
     display: flex;
@@ -152,4 +155,15 @@ li {
     justify-content: space-between;
     flex-basis: 12rem;
     height: 10rem;
+}
+
+#image-credit {
+    display: inline-block;
+    text-align: center;
+    font-size: .6rem;
+    color: aliceblue;
+    width: 100%;
+    /* background: var(--color-background-tamplates); */
+    position: relative;
+    bottom: 53.5rem;
 }
