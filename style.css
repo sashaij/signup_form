@@ -88,7 +88,7 @@ li {
     list-style: none;
 }
 
-div.side-template {
+.side-template {
 /*     display: flex;
     flex-direction: column; */
     /* flex-basis: 40vw; */
@@ -98,6 +98,7 @@ div.side-template {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
+    height: 10rem;
 }
 
 .form-template {
