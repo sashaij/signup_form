@@ -7,8 +7,31 @@
     --color-background-tamplates: rgba(0, 0, 0, 0.6);
 }
 
+@media(min-width: 600px) {
+    body {
+        display: flex;
+    }
+
+    div.side-template {
+        display: flex;
+        flex-direction: column; 
+        flex-basis: 40vw; 
+        background-size: 700px auto;
+        height: 100vh;
+    }
+
+    #card-body {
+        position: relative;
+        top: 20vh;
+    }
+
+    .form-template {
+        width: 58.9%;
+    }
+}
+
 body {
-    display: flex;
+    /* display: flex; */
     flex: 50vw;
     flex-direction: row;
     flex-wrap: wrap;
@@ -66,29 +89,29 @@ li {
 }
 
 div.side-template {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 40vw;
-    max-width: 600px;
+/*     display: flex;
+    flex-direction: column; */
+    /* flex-basis: 40vw; */
+/*     max-width: 600px;
+    height: 10rem; */
     background-image: url(images/jazmin-quaynor-bm9zWKi_c9Y-unsplash.jpg);
     background-repeat: no-repeat;
-    background-position: auto;
-    background-size: 700px auto;
-    margin: 0;
+    background-position: center;
+    background-size: auto;
 }
 
 .form-template {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-basis: 58vw;
+    /* flex-basis: 58vw; */
 }
 
 #card-body {
     color: white;
     background-color: var(--color-background-tamplates);
-    position: relative;
-    top: 20vh;
+/*     position: relative;
+    top: 20vh; */
     display: flex;
     justify-content: center;
     align-items: center;
