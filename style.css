@@ -186,6 +186,6 @@ li {
     color: aliceblue;
     width: 100%;
     /* background: var(--color-background-tamplates); */
-    position: relative;
-    bottom: 53.5rem;
+    position: absolute;
+    bottom: 51.5rem;
 }
