@@ -15,7 +15,7 @@
     div.side-template {
         display: flex;
         flex-direction: column; 
-        flex-basis: 40%; 
+        width: 40%; 
         background-size: 700px auto;
         height: 100vh;
     }
@@ -59,6 +59,14 @@
     height: 10rem;
     padding: 0;
     flex-grow: 1;
+}
+
+    div.header > h2 {
+        font-size: 1.5rem;
+    }
+
+    form > legend {
+    font-size: 2.5rem;
 }
     
 }
@@ -139,6 +147,7 @@ li {
     flex-direction: column;
     justify-content: center;
     /* flex-basis: 58vw; */
+    min-height: 84vh;
 }
 
 #card-body {
@@ -188,4 +197,9 @@ li {
     /* background: var(--color-background-tamplates); */
     position: absolute;
     bottom: 51.5rem;
+}
+
+    .header > h2,
+    legend {
+    font-size: 1rem;
 }
