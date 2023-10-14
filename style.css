@@ -139,6 +139,15 @@ div.footer {
     gap: 1rem;
 }
 
+div#log-in-string > span > a {
+    color: black;
+}
+
+
+div#log-in-string > span > a:hover {
+    color: #b64600
+}
+
 
 div.form-template {
     background-color: var(--color-background);
