@@ -173,12 +173,24 @@ li {
     list-style: none;
 }
 
+input {
+    font-family: inherit;
+    font-size: 1rem;
+    border: 0;
+    border-bottom: 2px solid orange;
+}
+
 input:valid {
-    border: 2px solid var(--color-valid);
+    border-bottom: 2px solid var(--color-valid);
 }
 
 input:invalid{
-    border: 2px solid var(--color-invalid);
+    border-bottom: 2px solid var(--color-invalid);
+}
+
+input:focus {
+    border: 0;
+    border-bottom: 2px solid blue;
 }
 .side-template {
 /*     display: flex;
