@@ -21,14 +21,14 @@
             <legend>Get Started</legend>
             <div id="inputs-cont">
                 <ul id="inputs-left">
-                    <li>
+                    <li id="user-first-name">
                         <label for="first-name">FIRST NAME</label>
                         <input type="text" id="first-name" name="first-name" placeholder="John" onkeyup="validateFirstName()">
                         <span id="first-name-error"></span>
                     </li>
-                    <li>
+                    <li id="user-last-name">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Doe" required>
+                        <input type="text" id="last-name" name="last-name" placeholder="Doe" onkeyup="validateLastName()">
                         <span id="last-name-error"></span>
                     </li>
                     <li>

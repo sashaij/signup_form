@@ -1,7 +1,10 @@
 'use strict'
 
+const firstNameCont = document.getElementById('user-first-name');
+const lastNameCont = document.getElementById('user-last-name');
+
 const userFirstName = document.getElementById('first-name');
-const userLastName = document.getElementById('last-name').value;
+const userLastName = document.getElementById('last-name');
 const userEmail = document.getElementById('email').value;
 const userPhone = document.getElementById('phone-number').value;
 const userPassword = document.getElementById('password').value;
@@ -15,27 +18,31 @@ const passwordError = document.getElementById('password-error');
 const confirmPasswordError = document.getElementById('confirm-password-error');
 
 const validateFirstName = function () {
-   /*          if(!userFirstName.match(/\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/) ) {
-                firstNameError.innerHTML = 'Write valid first name please';
-                //return false;
-            } else if (userFirstName.match(/\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/)){
-                firstNameError.innerHTML = 'valid';
-                //return true;
-            } else if (userFirstName.length === 0) {
-                firstNameError.innerHTML = 'First name is required';
-                //return false;
-                 }  */
-
         if (userFirstName.value.length === 0) {
             console.log(userFirstName.value);
-            firstNameError.innerHTML = 'First name is required';
+            firstNameError.innerHTML = 'First first name is required';
             return false;
         } else if(!userFirstName.value.match(/(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/)) {
             firstNameError.innerHTML = 'Input valid name please';
             return false;
         } else {
-            firstNameError.innerHTML = 'valid';
+            let checkImage = document.createElement('img');
+            checkImage.src = 'images/check.png'
+            firstNameCont.appendChild(checkImage);
             return true; 
         }
-
 }
+
+const validateLastName = function () {
+         if (userLastName.value.length === 0) {
+             console.log(userLastName.value);
+             lastNameError.innerHTML = 'Last name is required';
+             return false;
+         } else if(!userLastName.value.match(/(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/)) {
+             lastNameError.innerHTML = 'Input valid last name please';
+             return false;
+         } else {
+             lastNameError.innerHTML = 'valid';
+             return true; 
+         }
+ }
