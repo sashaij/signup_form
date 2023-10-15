@@ -173,14 +173,22 @@ li {
     list-style: none;
 }
 
+li > span {
+/*     position: sticky;
+    left: 14rem; */
+    font-size: .9rem;
+    color: var(--color-invalid);
+    font-size: .8rem
+}
+
 input {
     font-family: inherit;
     font-size: 1rem;
-    border: 0;
-    border-bottom: 2px solid orange;
+    border: 2px solid orange;
+    border-radius: 5px;
 }
 
-input:valid {
+/* input:valid {
     border-bottom: 2px solid var(--color-valid);
 }
 
@@ -191,7 +199,7 @@ input:invalid{
 input:focus {
     border: 0;
     border-bottom: 2px solid blue;
-}
+} */
 .side-template {
 /*     display: flex;
     flex-direction: column; */
