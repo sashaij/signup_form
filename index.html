@@ -23,24 +23,28 @@
                 <ul id="inputs-left">
                     <li id="user-first-name">
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="John" onkeyup="validateFirstName()">
-                        <img id='valid-checkmark' src="images/check.png" alt="Checkmark sign">                        <span id="first-name-error"></span>
+                        <input type="text" id="first-name" name="first-name" placeholder="John" onkeyup="validateFirstName()" required>
+                        <img id='valid-checkmark-fir-name' src="images/check.png" alt="Checkmark sign">                        
+                        <span id="first-name-error"></span>
                     </li>
                     <li id="user-last-name">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Doe" onkeyup="validateLastName()">
+                        <input type="text" id="last-name" name="last-name" placeholder="Doe" onkeyup="validateLastName()" required>
+                        <img id='valid-checkmark-las-name' src="images/check.png" alt="Checkmark sign"> 
                         <span id="last-name-error"></span>
                     </li>
                     <li>
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email" placeholder="mymail@mail.com" required>
+                        <input type="email" id="email" name="email" placeholder="mymail@mail.com" onkeyup="validateEmail()" required>
+                        <img id='valid-checkmark-email' src="images/check.png" alt="Checkmark sign">
                         <span id="email-error"></span>
                     </li>
                 </ul>
                 <ul id="inputs-right">
                     <li>
                         <label for="phone-number">PHONE NUMBER</label>
-                        <input type="tel" id="phone-number" name="phone-number" placeholder="0653242315" required>
+                        <input type="tel" id="phone-number" name="phone-number" placeholder="0653242315" onkeyup="validatePhone()" required>
+                        <img id='valid-checkmark-phone' src="images/check.png" alt="Checkmark sign">
                         <span id="phone-error"></span>
                     </li>
                     <li>

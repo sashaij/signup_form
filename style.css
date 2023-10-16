@@ -270,7 +270,10 @@ input:focus {
     bottom: 51.5rem;
 }
 
-#valid-checkmark {
+#valid-checkmark-fir-name,
+#valid-checkmark-las-name,
+#valid-checkmark-phone,
+#valid-checkmark-email {
     position: relative;
     bottom: 1.5rem;
     right: 1.8rem;
