@@ -270,6 +270,14 @@ input:focus {
     bottom: 51.5rem;
 }
 
+#valid-checkmark {
+    position: relative;
+    bottom: 1.5rem;
+    right: 1.8rem;
+    width: 1rem;
+    height: auto;
+}
+
     .header > h2,
     legend {
     font-size: 1rem;

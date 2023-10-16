@@ -17,18 +17,23 @@ const phoneError = document.getElementById('phone-error');
 const passwordError = document.getElementById('password-error');
 const confirmPasswordError = document.getElementById('confirm-password-error');
 
+const checkmarkName = document.getElementById('valid-checkmark');
+
+checkmarkName.style.display = 'none'; //validity checkmark is hidden by default
+
 const validateFirstName = function () {
         if (userFirstName.value.length === 0) {
             console.log(userFirstName.value);
             firstNameError.innerHTML = 'First first name is required';
+            checkmarkName.style.display = 'none';
             return false;
         } else if(!userFirstName.value.match(/(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/)) {
             firstNameError.innerHTML = 'Input valid name please';
+            checkmarkName.style.display = 'none';
             return false;
         } else {
-            let checkImage = document.createElement('img');
-            checkImage.src = 'images/check.png'
-            firstNameCont.appendChild(checkImage);
+            checkmarkName.style.display = 'block';
+            firstNameError.innerHTML = '';
             return true; 
         }
 }
