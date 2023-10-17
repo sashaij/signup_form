@@ -49,12 +49,14 @@
                     </li>
                     <li>
                         <label for="password">PASSWORD</label>
-                        <input title="Must be at least 8 characters long" type="password" id="password" name="password" placeholder="***********" required>
+                        <input title="Must be at least 8 characters long" type="password" id="password" name="password" placeholder="***********" onkeyup="validatePassword()" required>
+                        <img id='valid-checkmark-password' src="images/check.png" alt="Checkmark sign">
                         <span id="password-error"></span>
                     </li>
                     <li>
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-password" name="confirm-password" placeholder="***********" required>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="***********" onkeyup="confirmPassword()" required>
+                        <img id='valid-checkmark-conf-password' src="images/check.png" alt="Checkmark sign">
                         <span id="confirm-password-error"></span>
                     </li>
                 </ul>

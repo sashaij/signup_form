@@ -7,8 +7,8 @@ const userFirstName = document.getElementById('first-name');
 const userLastName = document.getElementById('last-name');
 const userEmail = document.getElementById('email');
 const userPhone = document.getElementById('phone-number');
-const userPassword = document.getElementById('password').value;
-const userConfPassword = document.getElementById('confirm-password').value;
+const userPassword = document.getElementById('password');
+const userConfPassword = document.getElementById('confirm-password');
 
 const firstNameError = document.getElementById('first-name-error');
 const lastNameError = document.getElementById('last-name-error');
@@ -21,11 +21,15 @@ const checkmarkFirstName = document.getElementById('valid-checkmark-fir-name');
 const checkmarkLastName = document.getElementById('valid-checkmark-las-name');
 const checkmarkEmail = document.getElementById('valid-checkmark-email');
 const checkmarkPhone = document.getElementById('valid-checkmark-phone');
+const checkmarkPassword = document.getElementById('valid-checkmark-password');
+const checkmarkConfPassword = document.getElementById('valid-checkmark-conf-password');
 
 checkmarkFirstName.style.display = 'none'; //validity checkmark is hidden by default
 checkmarkLastName.style.display = 'none';
 checkmarkPhone.style.display = 'none';
 checkmarkEmail.style.display = 'none';
+checkmarkPassword.style.display = 'none';
+checkmarkConfPassword.style.display = 'none';checkmarkConfPassword
 
 const validateFirstName = function () {
         if (userFirstName.value.length === 0) {
@@ -99,3 +103,40 @@ const validateLastName = function () {
     }
  }
 
+ const validatePassword = function () {
+    if (userPassword.value.length === 0) {
+        console.log(userPassword.value);
+        checkmarkPassword.style.display = 'none';
+        passwordError.innerHTML = 'Password is required';
+        return false;
+    } else if (userPassword.value.length < 8) {
+        checkmarkPassword.style.display = 'none';
+        passwordError.innerHTML = 'Password should be at least 8 characters long.';
+        return false;
+    } else if (userPassword.value.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/)){
+        passwordError.innerHTML = '';
+        checkmarkPassword.style.display = 'block';
+        return true; 
+    } else if(!userPassword.value.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/)) {
+        checkmarkPassword.style.display = 'none';
+        passwordError.innerHTML = 'Password should be at least 8 characters long, contain one capital letter, one number and one special character';
+        return false;
+    }
+ }
+
+ const confirmPassword = function () {
+    if (userConfPassword.value.length === 0) {
+        console.log(userConfPassword.value);
+        checkmarkConfPassword.style.display = 'none';
+        confirmPasswordError.innerHTML = 'Password confirmation is required';
+        return false;
+    } else if (userConfPassword.value.match(userPassword.value)){
+        confirmPasswordError.innerHTML = '';
+        checkmarkConfPassword.style.display = 'block';
+        return true; 
+    } else if(!userConfPassword.value.match(userPassword.value)) {
+        checkmarkConfPassword.style.display = 'none';
+       confirmPasswordError.innerHTML = 'Passwords don\'t match';
+        return false;
+    }
+ }

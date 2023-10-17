@@ -5,6 +5,7 @@
     --color-invalid: #F94C10; 
     --color-background: #FFF5E0; 
     --color-background-tamplates: rgba(0, 0, 0, 0.6);
+    --color-tip: #d2de32; 
 }
 
 @media(min-width: 600px) {
@@ -273,7 +274,9 @@ input:focus {
 #valid-checkmark-fir-name,
 #valid-checkmark-las-name,
 #valid-checkmark-phone,
-#valid-checkmark-email {
+#valid-checkmark-email,
+#valid-checkmark-password,
+#valid-checkmark-conf-password {
     position: relative;
     bottom: 1.5rem;
     right: 1.8rem;
