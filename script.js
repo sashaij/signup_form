@@ -133,11 +133,11 @@ const validateLastName = function () {
         checkmarkConfPassword.style.display = 'none';
         confirmPasswordError.innerHTML = 'Password confirmation is required';
         return false;
-    } else if (userConfPassword.value.match(userPassword.value)){
+    } else if (userConfPassword.value === userPassword.value){
         confirmPasswordError.innerHTML = '';
         checkmarkConfPassword.style.display = 'block';
         return true; 
-    } else if(!userConfPassword.value.match(userPassword.value)) {
+    } else if(!userConfPassword.value !== userPassword.value) {
         checkmarkConfPassword.style.display = 'none';
        confirmPasswordError.innerHTML = 'Passwords don\'t match';
         return false;
