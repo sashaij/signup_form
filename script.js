@@ -107,10 +107,12 @@ const validateLastName = function () {
     if (userPassword.value.length === 0) {
         console.log(userPassword.value);
         checkmarkPassword.style.display = 'none';
+        passwordError.style.marginTop = '3.6rem';
         passwordError.innerHTML = 'Password is required';
         return false;
     } else if (userPassword.value.length < 8) {
         checkmarkPassword.style.display = 'none';
+        passwordError.style.marginTop = '3.6rem';
         passwordError.innerHTML = 'Password should be at least 8 characters long.';
         return false;
     } else if (userPassword.value.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/)){
@@ -119,6 +121,7 @@ const validateLastName = function () {
         return true; 
     } else if(!userPassword.value.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/)) {
         checkmarkPassword.style.display = 'none';
+        passwordError.style.marginTop = '5.6rem';  //feedback message layout adjustment for larger message
         passwordError.innerHTML = 'Password should be at least 8 characters long, contain one capital letter, one number and one special character';
         return false;
     }
