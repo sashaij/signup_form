@@ -222,15 +222,10 @@ input {
 
 
 .side-template {
-/*     display: flex;
-    flex-direction: column; */
-    /* flex-basis: 40vw; */
-/*     max-width: 600px;
-    height: 10rem; */
     background-image: url(images/jazmin-quaynor-bm9zWKi_c9Y-unsplash.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;
+    background-size: 100%;
     height: 10rem;
     width: 100%;
 }
@@ -246,8 +241,6 @@ input {
 #card-body {
     color: white;
     background-color: var(--color-background-tamplates);
-/*     position: relative;
-    top: 20vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,7 +284,6 @@ input {
     font-size: .6rem;
     color: aliceblue;
     width: 100%;
-    /* background: var(--color-background-tamplates); */
     position: absolute;
     bottom: 51.5rem;
 }
@@ -336,5 +328,3 @@ input {
     legend {
     font-size: 1rem;
 }
-
-/* margin-bottom: -1rem;*/
