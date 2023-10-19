@@ -88,15 +88,17 @@ const validateLastName = function () {
         checkmarkPhone.style.display = 'none';
         phoneError.innerHTML = 'Phone number is required';
         return false;
-    } else if (userPhone.value.length < 10) {
+    } else if (userPhone.value.match(/^\d[0-9]/) && userPhone.value.length < 10) {
         checkmarkPhone.style.display = 'none';
-        phoneError.innerHTML = 'Phone number should be 10 digits long.';
+        phoneError.innerHTML = '';
         return false;
-    } else if(!userPhone.value.match(/^[0-9]{10}$/)) {
+    
+    }  else if(!userPhone.value.match(/^\d{10}/)) {
         checkmarkPhone.style.display = 'none';
         phoneError.innerHTML = 'Only digits alowed. Input valid phone number please.';
+        phoneError.style.marginTop = '4.8rem';
         return false;
-    } else {
+    } else if (userPhone.value.match(/^\d{10}$/)) {
         phoneError.innerHTML = '';
         checkmarkPhone.style.display = 'block';
         return true; 
@@ -121,7 +123,7 @@ const validateLastName = function () {
         return true; 
     } else if(!userPassword.value.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/)) {
         checkmarkPassword.style.display = 'none';
-        passwordError.style.marginTop = '5.9rem';  //feedback message layout adjustment for larger message
+        passwordError.style.marginTop = '7rem';  //feedback message layout adjustment for larger message
         passwordError.innerHTML = 'Password should be at least 8 characters long, contain one capital letter, one number and one special character';
         return false;
     }
