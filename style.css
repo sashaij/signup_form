@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@300&display=swap');
 
 :root {
-    --color-valid: #79E0EE; 
+    --color-hyperlinks-hover: #a9beed; 
+    --color-hyperlinks: #9066db;
     --color-invalid: #F94C10; 
-    --color-background: #FFF5E0; 
-    --color-background-tamplates: rgba(0, 0, 0, 0.6);
+    --color-background: #fff7fb; 
+    --color-background-tamplates: rgba(249, 242, 242, 0.6);
     --color-tip: #d2de32; 
+    --color-main-text: #292d71;
+    --color-secondary-text: #575dda;
 }
 
 @media(min-width: 800px) {
@@ -43,7 +46,7 @@
         display: inline-block;
         text-align: center;
         font-size: 1rem;
-        color: aliceblue;
+        color: var(--color-secondary-text);
         width: 100%;
         background: var(--color-background-tamplates);
         position: relative;
@@ -97,12 +100,24 @@
 
     div.header > h2 {
         font-size: 1.5rem;
+
     }
 
     form > legend {
         font-size: 2.5rem;
     }
     
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-hyperlinks);
+}
+
+
+div#log-in-string > span > a:hover,
+div#image-credit > a:hover {
+    color: var(--color-hyperlinks-hover);
 }
 
 body {
@@ -164,10 +179,6 @@ form {
     align-items: flex-start;
 }
 
-div#image-credit > a {
-    color: aliceblue;
-}
-
 div.footer {
     display: flex;
     flex-direction: column;
@@ -177,15 +188,11 @@ div.footer {
     gap: 1rem;
 }
 
-div#log-in-string > span > a {
-    color: black;
+legend,
+.header > h2,
+div#log-in-string > span {
+    color: var(--color-main-text);
 }
-
-
-div#log-in-string > span > a:hover {
-    color: #b64600
-}
-
 
 div.form-template {
     background-color: var(--color-background);
@@ -198,6 +205,7 @@ div.footer, legend {
 label {
   font-size: 1rem;
   font-weight: 900;
+  color: var(--color-secondary-text);
 }
 
 legend {
@@ -219,13 +227,13 @@ li > span {
 input {
     font-family: inherit;
     font-size: 1rem;
-    border: 2px solid orange;
+    border: 2px solid #f1c7ff;
     border-radius: 5px;
 }
 
 
 .side-template {
-    background-image: url(images/jazmin-quaynor-bm9zWKi_c9Y-unsplash.jpg);
+    background-image: url(images/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -285,10 +293,10 @@ input {
     display: inline-block;
     text-align: center;
     font-size: .6rem;
-    color: aliceblue;
+    color: var(--color-secondary-text);
     width: 100%;
     position: absolute;
-    bottom: 51.5rem;
+    bottom: 45.8rem;
 }
 
 #first-name-error,
