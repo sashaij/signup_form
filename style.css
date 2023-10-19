@@ -29,9 +29,10 @@
         height: 100vh;
     }
 
-    #card-body {
+    div#card-body {
         position: relative;
         top: 20vh;
+        width: 100%;
     }
 
     .form-template {
@@ -250,6 +251,7 @@ input {
     justify-content: center;
     align-items: center;
     height: 10rem;
+    width: 100vw;
 }
 
 
