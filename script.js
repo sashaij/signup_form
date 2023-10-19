@@ -83,22 +83,21 @@ const validateLastName = function () {
 }
 
  const validatePhone = function () {
-    if (userPhone.value.length === 0) {
+    if (userPhone.value.length < 1) {
         console.log(userPhone.value);
         checkmarkPhone.style.display = 'none';
         phoneError.innerHTML = 'Phone number is required';
         return false;
-    } else if (userPhone.value.match(/^\d[0-9]/) && userPhone.value.length < 10) {
+    } else if (userPhone.value.match(/^[0-9]*$/) && userPhone.value.length < 10) {
         checkmarkPhone.style.display = 'none';
         phoneError.innerHTML = '';
         return false;
-    
-    }  else if(!userPhone.value.match(/^\d{10}/)) {
+    }  else if(!userPhone.value.match(/^[0-9]*$/) && userPhone.value.length >= 1) {
         checkmarkPhone.style.display = 'none';
         phoneError.innerHTML = 'Only digits alowed. Input valid phone number please.';
         /* phoneError.style.marginTop = '4.8rem'; */
         return false;
-    } else if (userPhone.value.match(/^\d{10}$/)) {
+    } else if (userPhone.value.match(/^[0-9]{10}$/)) {
         phoneError.innerHTML = '';
         checkmarkPhone.style.display = 'block';
         return true; 
