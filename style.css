@@ -232,6 +232,7 @@ input {
     background-position: center;
     background-size: auto;
     height: 10rem;
+    width: 100%;
 }
 
 .form-template {
