@@ -17,6 +17,10 @@
         padding-right: 1rem;
     }
 
+    ul > li > span {
+        font-size: .75rem;
+    }
+
     div.side-template {
         display: flex;
         flex-direction: column; 
@@ -57,24 +61,46 @@
 
     #inputs-left, 
     #inputs-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 18rem;
-    gap: 3rem;
-    
-    padding: 0;
-    
-    flex-grow: 1;
-}
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 18rem;
+        gap: 3rem;
+        padding: 0;
+        flex-grow: 1;
+    }
+
+    span#first-name-error,
+    span#last-name-error,
+    span#email-error,
+    span#phone-error,
+    span#confirm-password-error {
+        position: absolute;
+        margin-top: 3.8rem;
+        min-width: 8rem;
+        width: 20vw;
+        text-align: justify;
+    }
+
+    span#password-error{
+        position: absolute;
+        margin-top: 7.7rem;
+        min-width: 8rem;
+        width: 20vw;
+        text-align: justify;
+    }
+
+    span#phone-error {
+        margin-top: 5rem;
+    }
 
     div.header > h2 {
         font-size: 1.5rem;
     }
 
     form > legend {
-    font-size: 2.5rem;
-}
+        font-size: 2.5rem;
+    }
     
 }
 
@@ -182,11 +208,8 @@ li {
 }
 
 li > span {
-/*     position: sticky;
-    left: 14rem; */
-    font-size: .9rem;
     color: var(--color-invalid);
-    font-size: .75rem
+    font-size: .6rem
 }
 
 input {
@@ -278,9 +301,17 @@ input {
 #confirm-password-error {
     position: absolute;
     margin-top: 3.8rem;
-    min-width: 8rem;
-    width: 21vw;
+    min-width: 10rem;
+    width: 65vw;
     text-align: justify;
+}
+
+#password-error {
+    margin-top: 6rem;
+}
+
+#phone-error {
+    margin-top: 4.5rem;
 }
 
 
