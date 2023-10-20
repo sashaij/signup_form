@@ -32,53 +32,44 @@ checkmarkPassword.style.display = 'none';
 checkmarkConfPassword.style.display = 'none';checkmarkConfPassword
 
 const validateFirstName = function () {
-        if (userFirstName.value.length === 0) {
-            console.log(userFirstName.value);
-            firstNameError.innerHTML = 'First first name is required';
-            checkmarkFirstName.style.display = 'none';
-            return false;
-        } else if(!userFirstName.value.match(/(^[a-zA-Z'][a-zA-Z'\s]{0,20}[a-zA-Z']$)/)) {
-            firstNameError.innerHTML = 'Input valid name please';
-            checkmarkFirstName.style.display = 'none';
-            return false;
-        } else {
-            firstNameError.innerHTML = '';
-            checkmarkFirstName.style.display = 'block';
-            return true; 
-        }
+    if (userFirstName.value.length === 0) {
+        console.log(userFirstName.value);
+        firstNameError.innerHTML = 'First first name is required';
+        checkmarkFirstName.style.display = 'none';
+    } else if(!userFirstName.value.match(/(^[a-zA-Z'][a-zA-Z'\s]{0,20}[a-zA-Z']$)/)) {
+        firstNameError.innerHTML = 'Input valid name please';
+        checkmarkFirstName.style.display
+    } else {
+        firstNameError.innerHTML = '';
+        checkmarkFirstName.style.display = 'block';
+    }
 }
 
 const validateLastName = function () {
-         if (userLastName.value.length === 0) {
-             console.log(userLastName.value);
-             checkmarkLastName.style.display = 'none';
-             lastNameError.innerHTML = 'Last name is required';
-             return false;
-         } else if(!userLastName.value.match(/(^[a-zA-Z'][a-zA-Z'\s]{0,20}[a-zA-Z']$)/)) {
-            checkmarkLastName.style.display = 'none';
-             lastNameError.innerHTML = 'Input valid last name please';
-             return false;
-         } else {
-             lastNameError.innerHTML = '';
-             checkmarkLastName.style.display = 'block';
-             return true; 
-         }
+    if (userLastName.value.length === 0) {
+        console.log(userLastName.value);
+        checkmarkLastName.style.display = 'none';
+        lastNameError.innerHTML = 'Last name is required';
+    } else if(!userLastName.value.match(/(^[a-zA-Z'][a-zA-Z'\s]{0,20}[a-zA-Z']$)/)) {
+        checkmarkLastName.style.display = 'none';
+        lastNameError.innerHTML = 'Input valid last name please';
+    } else {
+        lastNameError.innerHTML = '';
+        checkmarkLastName.style.display = 'block';
+    }
  }
 
- const validateEmail = function () {
+const validateEmail = function () {
     if (userEmail.value.length === 0) {
         console.log(userEmail.value);
         checkmarkEmail.style.display = 'none';
         emailError.innerHTML = 'Email is required';
-        return false;
     } else if(!userEmail.value.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)) {
        checkmarkEmail.style.display = 'none';
         emailError.innerHTML = 'Input valid email please';
-        return false;
     } else {
         emailError.innerHTML = '';
         checkmarkEmail.style.display = 'block';
-        return true; 
     }
 }
 
@@ -87,20 +78,16 @@ const validateLastName = function () {
         console.log(userPhone.value);
         checkmarkPhone.style.display = 'none';
         phoneError.innerHTML = 'Phone number is required';
-        return false;
     } else if (userPhone.value.match(/^[0-9]*$/) && userPhone.value.length < 10) {
         checkmarkPhone.style.display = 'none';
         phoneError.innerHTML = '';
-        return false;
     }  else if(!userPhone.value.match(/^[0-9]*$/) && userPhone.value.length >= 1) {
         checkmarkPhone.style.display = 'none';
         phoneError.innerHTML = 'Only digits alowed. Input valid phone number please.';
-        /* phoneError.style.marginTop = '4.8rem'; */
         return false;
     } else if (userPhone.value.match(/^[0-9]{10}$/)) {
         phoneError.innerHTML = '';
         checkmarkPhone.style.display = 'block';
-        return true; 
     }
  }
 
@@ -110,21 +97,15 @@ const validateLastName = function () {
         checkmarkPassword.style.display = 'none';
         passwordError.style.marginTop = '4.2rem';
         passwordError.innerHTML = 'Password is required';
-        return false;
     } else if (userPassword.value.length < 8) {
         checkmarkPassword.style.display = 'none';
-        /* passwordError.style.marginTop = '5rem'; */
         passwordError.innerHTML = 'Password should be at least 8 characters long.';
-        return false;
     } else if (userPassword.value.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/)){
         passwordError.innerHTML = '';
         checkmarkPassword.style.display = 'block';
-        return true; 
     } else if(!userPassword.value.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/)) {
         checkmarkPassword.style.display = 'none';
-        /* passwordError.style.marginTop = '7rem';  */ //feedback message layout adjustment for larger message
         passwordError.innerHTML = 'Password should be at least 8 characters long, contain one capital letter, one number and one special character';
-        return false;
     }
  }
 
@@ -133,14 +114,11 @@ const validateLastName = function () {
         console.log(userConfPassword.value);
         checkmarkConfPassword.style.display = 'none';
         confirmPasswordError.innerHTML = 'Password confirmation is required';
-        return false;
     } else if (userConfPassword.value === userPassword.value){
         confirmPasswordError.innerHTML = '';
         checkmarkConfPassword.style.display = 'block';
-        return true; 
     } else if(!userConfPassword.value !== userPassword.value) {
         checkmarkConfPassword.style.display = 'none';
        confirmPasswordError.innerHTML = 'Passwords don\'t match';
-        return false;
     }
  }
